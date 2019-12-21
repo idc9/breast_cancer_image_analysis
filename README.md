@@ -45,7 +45,7 @@ The AJIVE analysis runs in about 30 seconds, but the whole script may take a whi
 ### 5. Image visualizations
 
 ```
-python image_visualizations.py
+python scripts/image_visualizations.py
 ```
 
 This may take a couple of hours and the resulting saved figures are a couple of gigabytes.
