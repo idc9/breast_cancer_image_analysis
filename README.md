@@ -7,11 +7,11 @@ Supplementary figures from the paper may be downloaded from [this online archive
 
 # Instructions to run the code
 
-1. Setup data directories
+### 1. Setup data directories
 
-Once granted permission to access the data instructions for setting up the data directory will be provided. Alternatively, see cbcs_joint/Paths.py.
+cbcs_joint/Paths.py has instructions for setting up the data directory once the data has been provided by the CBCS steering committee.
 
-2. Install code
+### 2. Install code
 
 Download the github repository,
 ```
@@ -26,15 +26,27 @@ cd cbcs_joint/
 pip install .
 ```
 
-3. Image patch feature extraction (scripts/patch_feat_extraction.py)
+### 3. Image patch feature extraction
+
+```
+python scripts/patch_feat_extraction.py
+```
 
 This step extracts CNN features from each image patch and may take a few hours. If a GPU is available it will automatically be used. The resulting patch features csv file is about 3.6 Gb.
 
-4. AJIVE analysis (scripts/ajive_analysis.py)
+### 4. AJIVE analysis
+
+```
+python scripts/ajive_analysis.py
+```
 
 The AJIVE analysis runs in about 30 seconds, but the whole script may take a while due to data loading and saving large figures.
 
-5. Image visualizations (scripts/image_visualizations.py)
+### 5. Image visualizations
+
+```
+python image_visualizations.py
+```
 
 This may take a couple of hours and the resulting saved figures are a couple of gigabytes.
 
