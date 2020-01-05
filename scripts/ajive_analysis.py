@@ -112,7 +112,6 @@ all_tests = Union().add_tests([('common', common_scd),
 
 all_tests.correct_multi_tests()
 
-
 dump(all_tests, os.path.join(Paths().results_dir, 'data',
                              'clinical_data_comparisions'))
 

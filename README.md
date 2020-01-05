@@ -26,6 +26,9 @@ cd cbcs_joint/
 pip install .
 ```
 
+To install the `explore' package see [https://github.com/idc9/explore](https://github.com/idc9/explore).
+
+
 ### 3. Image patch feature extraction
 
 ```
