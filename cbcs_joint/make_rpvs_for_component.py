@@ -14,7 +14,7 @@ from cbcs_joint.jitter import jitter_hist
 
 def viz_component(subj_scores, core_scores,
                   patch_scores, patch_dataset, avail_cores,
-                  loading_vec, transforms, comp_name,
+                  loading_vec, comp_name,
                   top_dir, signal_kind=None,
                   n_extreme_subjs=5, n_extreme_patches=20,
                   n_patches_per_subj=5):

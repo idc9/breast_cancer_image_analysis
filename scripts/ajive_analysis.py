@@ -69,7 +69,6 @@ for r in range(ajive.common.rank):
 
 
 # genetic individual loadings
-
 load_dir = os.path.join(Paths().results_dir, 'genetic_indiv', 'loadings')
 os.makedirs(load_dir, exist_ok=True)
 n_indiv_comps = min(5, ajive.blocks['genes'].individual.rank)

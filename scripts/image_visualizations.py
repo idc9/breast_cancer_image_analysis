@@ -1,7 +1,6 @@
 import os
 from joblib import load
 import numpy as np
-from torchvision.transforms import Normalize, ToTensor, Compose
 
 from cbcs_joint.Paths import Paths
 from cbcs_joint.load_analysis_data import load_analysis_data
@@ -24,12 +23,6 @@ avail_cores = [i for i in core_centroids.index
 
 # load precomputed AJIVE
 ajive = load(os.path.join(Paths().results_dir, 'data', 'fit_ajive'))
-
-# Transformations applied to patches
-channel_avg = patch_dataset.pixel_stats_['avg'] / 255
-channel_std = np.sqrt(patch_dataset.pixel_stats_['var']) / 255
-transforms = Compose([ToTensor(),
-                      Normalize(mean=channel_avg, std=channel_std)])
 
 # figure config
 mpl_noaxis()
@@ -67,7 +60,6 @@ for comp in range(ajive.common.rank):
                   patch_scores=patch_scores,
                   patch_dataset=patch_dataset,
                   loading_vec=loading_vec,
-                  transforms=transforms,
                   comp_name=comp_name,
                   top_dir=top_dir,
                   signal_kind='common',
@@ -107,7 +99,6 @@ for comp in range(n_indiv_comps):
                   patch_scores=patch_scores,
                   patch_dataset=patch_dataset,
                   loading_vec=loading_vec,
-                  transforms=transforms,
                   comp_name=comp_name,
                   top_dir=top_dir,
                   signal_kind='image_indiv',
